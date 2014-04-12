@@ -54,7 +54,8 @@ do ($ = jQuery, window, document) ->
         tab.path == path
 
       # Update the route
-      history.pushState {}, '', tab.path
+      root = @settings.root || ''
+      history.pushState {}, '', "#{root}/#{tab.path}"
 
       # Remove previus active class
       $(@element).find(".tab-item.active").removeClass 'active'

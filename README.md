@@ -47,6 +47,7 @@ Template['myapp'].helpers
 
   tabSettings: ->
     defaultPath: @tab || "first"
+    root: 'myapp'
     type: 'horizontal'
     tabs:  [
 
